@@ -42,11 +42,11 @@ console.log(getLetterGrade(65)); // This should print "Your grade is: F"
 
 **Part A:**
 
-Letter is always `undefined` in the **function** because we're assigning the **variable** letter inside of the **if statement** blocks. 
+`Letter` is always `undefined` in the **function** because we're defining the **variable** letter inside of the **if statement** blocks. We shouldn't do this because the `let` keyword is a **block scope** so defining it inside the if statement block means we're basically saying that `Letter` only exists inside an if statement, not the function or globally, just inside the if statement so that causes `Letter` to become `undefined`.
 
 **Part B:**
 
-To fix it just remove all of the `let` keywords from all the letters inside the if statements.
+To fix it just remove all of the `let` keywords from all the letters inside the if statements. 
 
 ---
 
