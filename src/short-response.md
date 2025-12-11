@@ -42,11 +42,11 @@ console.log(getLetterGrade(65)); // This should print "Your grade is: F"
 
 **Part A:**
 
-Your response...
+Letter is always `undefined` in the **function** because we're assigning the **variable** letter inside of the **if statement** blocks. 
 
 **Part B:**
 
-Your response...
+To fix it just remove all of the `let` keywords from all the letters inside the if statements.
 
 ---
 
@@ -69,18 +69,18 @@ console.log(originalSettings.volume);
 
 **Part A:**
 
-Your response...
+75 will be returned to the console since assigning `newSettings` to `originalSettings` will make both **variables** **reference** the same **object** so mutating a **property** like `volume` in one of the variables will mutate both.
 
 **Part B:**
+Instead of assigning `newSettings` to `originalSettings` I would just assign `newSettings` to a copy of `originalSettings` using the **spread operator**(...) so that those 2 variables aren't referencing the same **values**
 
-Your response...
 
 **Corrected Code:**
 
 ```js
 // Fix this code so newSettings is a true copy
 const originalSettings = { volume: 50, brightness: 80 };
-const newSettings = originalSettings;
+const newSettings = {...originalSettings};
 newSettings.volume = 75;
 console.log(originalSettings.volume);
 ```
@@ -109,5 +109,5 @@ Walk through what happens in the first iteration of filter:
 - What happens with that returned value?
 
 ### Response 3
+On the first **iteration** of `products.filter`, `product` will represent the first object with the name property `laptop`, because the **filter** **method** is checking for products in stock. Its going to check if that laptop inStock **property** is true and **return** it if it is and its going to be stored in an array that the `itemsInStock` variable has. Then its going to repeat that process with all of its other iterations then by the end of it the itemsInStock variable will just be an array with only the objects with the inStock property set to true.
 
-Your response...
